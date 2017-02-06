@@ -6,8 +6,6 @@
 using namespace std;
 
 struct lol {
-	string fname;
-	string lname;
 	pair <string, string> name;
 	double srz;
 };
@@ -22,9 +20,6 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		cin >> fname >> lname >> a >> b >> c;
 		double l;
-		lol zn;
-		zn.fname = fname; 
-		zn.lname = lname;
 		lol zn; 
 		zn.name.first = fname;
 		zn.name.second = lname;
@@ -34,7 +29,6 @@ int main() {
 	}
 	stable_sort(allzn.begin(), allzn.end(), sor);
 	for (auto now : allzn) {
-		cout << now.fname << " " << now.lname << endl;
 		cout << now.name.first << " " << now.name.second << endl;
 	}
 	return 0;
