@@ -2,11 +2,13 @@
 #include <algorithm>
 #include <string>
 #include <vector>
+#include <cmath>
 using namespace std;
 
 struct lol {
 	string fname;
 	string lname;
+	pair <string, string> name;
 	double srz;
 };
 bool sor(lol a, lol b) {
@@ -23,6 +25,9 @@ int main() {
 		lol zn;
 		zn.fname = fname; 
 		zn.lname = lname;
+		lol zn; 
+		zn.name.first = fname;
+		zn.name.second = lname;
 		l = (a + b + c) / 3;
 		zn.srz = l;
 		allzn[i] = zn;
@@ -30,6 +35,7 @@ int main() {
 	stable_sort(allzn.begin(), allzn.end(), sor);
 	for (auto now : allzn) {
 		cout << now.fname << " " << now.lname << endl;
+		cout << now.name.first << " " << now.name.second << endl;
 	}
 	return 0;
 }
